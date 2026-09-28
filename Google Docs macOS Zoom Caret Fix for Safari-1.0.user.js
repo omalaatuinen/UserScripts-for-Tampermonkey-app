@@ -6,6 +6,19 @@
 // @run-at       document-idle
 // ==/UserScript==
 
+/*
+ * Google Docs uses an off-screen iframe as its focused text-input target,
+ * while the visible text caret is rendered separately.
+ *
+ * In Safari, macOS Accessibility Zoom may follow the position of this
+ * off-screen focused iframe instead of the visible caret, causing the
+ * zoomed view and pointer to jump to the top-left while typing.
+ *
+ * This script keeps the hidden text-input iframe positioned at the
+ * visible Google Docs caret so macOS Zoom follows the actual typing
+ * position.
+ */
+
 (() => {
     'use strict';
 
