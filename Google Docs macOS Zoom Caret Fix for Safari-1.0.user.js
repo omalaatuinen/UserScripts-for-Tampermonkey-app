@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Google Docs macOS Zoom Caret Fix
-// @description  Makes macOS Accessibility Zoom follow the visible Google Docs text caret in Safari.
+// @description  Fixes Google Docs caret tracking with macOS Accessibility Zoom in Safari. Prevents Zoom from jumping to the top-left while typing by synchronizing Google Docs' hidden text-input iframe with the visible text caret.
 // @version      1.0
 // @match        https://docs.google.com/document/*
 // @run-at       document-idle
